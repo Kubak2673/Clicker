@@ -9,6 +9,7 @@ public class MainGameLoop : MonoBehaviour
     public float timeSpend = 0f;
     public TextMeshProUGUI saveText;
     public float saveInterval = 30f;
+    public static int clickMultiplayer = 1;
     [SerializeField] TextMeshProUGUI clickText;
 
     [System.Obsolete]
@@ -33,7 +34,10 @@ public class MainGameLoop : MonoBehaviour
         buildings.building1Count = data.building1Count;
         buildings.building2Count = data.building2Count;
         buildings.building3Count = data.building3Count;
-        buildings.buildingsIncome = data.buildingsIncome;
+        Buildings.buildingsIncome = data.buildingsIncome;
+        GoldenButtons.goldenButtons = data.goldenButtons;
+        GoldenButtons.timeLeft = data.timeLeft;
+        clickMultiplayer = data.clickMultiplayer;
     }
     void Update()
     {
@@ -47,7 +51,7 @@ public class MainGameLoop : MonoBehaviour
     }
     public void Click()
     {
-        clicks++;
+        clicks += clickMultiplayer;
     }
 
     public void Save()

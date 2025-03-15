@@ -24,7 +24,7 @@ public class Buildings : MonoBehaviour
     [SerializeField] TextMeshProUGUI building3CostText;
 
     [Header("Buildings settings")]
-    public int buildingsIncome = 0;
+    public static int buildingsIncome = 0;
     public double priceMultiplayer = 1.15;
     [SerializeField] TextMeshProUGUI clicksPerSecondText;
 
