@@ -12,16 +12,20 @@ public class PlayerData
     public int buildingsIncome;
     public int goldenButtons;
     public int clickMultiplayer;
+    public bool clickMultiplayer1;
+    public bool clickMultiplayer2;
 
     public PlayerData (MainGameLoop mainGameLoop, Buildings buildings)
     {
-        clicks = mainGameLoop.clicks;
+        clicks = MainGameLoop.clicks;
         timeSpend = mainGameLoop.timeSpend;
         building1Count = buildings.building1Count;
         building2Count = buildings.building2Count;
         building3Count = buildings.building3Count;
         buildingsIncome = Buildings.buildingsIncome;
         goldenButtons = GoldenButtons.goldenButtons;
+        clickMultiplayer1 = GoldenButtons.clickMultiplayer1;
+        clickMultiplayer2 = GoldenButtons.clickMultiplayer2;
         clickMultiplayer = MainGameLoop.clickMultiplayer;
         timeLeft = GoldenButtons.timeLeft;
     }

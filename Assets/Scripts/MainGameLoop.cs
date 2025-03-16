@@ -4,7 +4,7 @@ using UnityEngine;
 public class MainGameLoop : MonoBehaviour
 {
     private Buildings buildings;
-    public int clicks = 0;
+    public static int clicks = 0;
     float timerToSave = 0f;
     public float timeSpend = 0f;
     public TextMeshProUGUI saveText;
@@ -36,6 +36,8 @@ public class MainGameLoop : MonoBehaviour
         buildings.building3Count = data.building3Count;
         Buildings.buildingsIncome = data.buildingsIncome;
         GoldenButtons.goldenButtons = data.goldenButtons;
+        GoldenButtons.clickMultiplayer1 = data.clickMultiplayer1;
+        GoldenButtons.clickMultiplayer2 = data.clickMultiplayer2;
         GoldenButtons.timeLeft = data.timeLeft;
         clickMultiplayer = data.clickMultiplayer;
     }

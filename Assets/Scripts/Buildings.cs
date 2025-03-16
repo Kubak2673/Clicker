@@ -56,9 +56,9 @@ public class Buildings : MonoBehaviour
     public void BuyBuilding1()
     {
         double cost = GetBuilding1Cost();
-        if (mainGameLoop.clicks >= cost)
+        if (MainGameLoop.clicks >= cost)
         {
-            mainGameLoop.clicks -= (int)cost;
+            MainGameLoop.clicks -= (int)cost;
             building1Count++;
             buildingsIncome += 1;
         }
@@ -75,9 +75,9 @@ public class Buildings : MonoBehaviour
     public void BuyBuilding2()
     {
         double cost = GetBuilding2Cost();
-        if (mainGameLoop.clicks >= cost)
+        if (MainGameLoop.clicks >= cost)
         {
-            mainGameLoop.clicks -= (int)cost;
+            MainGameLoop.clicks -= (int)cost;
             building2Count++;
             buildingsIncome += 15;
         }
@@ -94,9 +94,9 @@ public class Buildings : MonoBehaviour
     public void BuyBuilding3()
     {
         double cost = GetBuilding3Cost();
-        if (mainGameLoop.clicks >= cost)
+        if (MainGameLoop.clicks >= cost)
         {
-            mainGameLoop.clicks -= (int)cost;
+            MainGameLoop.clicks -= (int)cost;
             building3Count++;
             buildingsIncome += 50;
         }
@@ -108,6 +108,6 @@ public class Buildings : MonoBehaviour
     }
     void CPS()
     {
-        mainGameLoop.clicks += buildingsIncome;
+        MainGameLoop.clicks += buildingsIncome;
     }
 }
